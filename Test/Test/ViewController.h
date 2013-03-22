@@ -25,8 +25,9 @@
 @property (retain, nonatomic) ProfLoggedViewController *profLoggedViewController;
 @property (retain, nonatomic) StudentAgreeViewController *studentAgreeViewController;
 
--(IBAction)switchToStudentView:(id)sender;
--(IBAction)switchToProfView:(id)sender;
+-(IBAction)swtichViews:(id)sender;
+-(IBAction)switchToStudentView;
+-(IBAction)switchToProfView;
 -(IBAction)logout:(id)sender;
 -(IBAction)studentAgree:(id)sender;
 @end

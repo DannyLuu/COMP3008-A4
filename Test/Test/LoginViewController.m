@@ -13,6 +13,7 @@
 @end
 
 @implementation LoginViewController
+@synthesize loginField;
 
 - (IBAction)loginButtonPressed:(id)sender
 {

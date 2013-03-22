@@ -26,14 +26,22 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    /*UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
     self.webView = webView;
     NSString *urlAddress = [NSString stringWithFormat:@"http://www.google.com"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:requestObj];
-    [webView release];
+    [webView loadRequest:requestObj];*/
+    
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"
+                          inDirectory:@"html_files"];
+    NSData *htmlData = [NSData dataWithContentsOfFile:htmlFile];
+    webView = [[UIWebView alloc] init];
+    [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@""]];
+    
+    //[webView release];
+    
+    [super viewDidLoad];
     
 }
 

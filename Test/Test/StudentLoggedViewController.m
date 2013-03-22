@@ -13,6 +13,7 @@
 @end
 
 @implementation StudentLoggedViewController
+@synthesize label;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -22,6 +22,7 @@
 @synthesize profLoggedViewController;
 @synthesize studentAgreeViewController;
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad]; 
@@ -39,7 +40,20 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)switchToStudentView:(id)sender
+- (IBAction)switchViews:(id)sender
+{
+    if([loginViewController.loginField.text isEqualToString:@"student"])
+    {
+        [self switchToStudentView];
+    }else if([loginViewController.loginField.text isEqualToString:@"prof"])
+    {
+        [self switchToProfView];
+    }
+    
+    loginViewController.loginField.text = @"";
+}
+
+- (IBAction)switchToStudentView
 {
     
     if(self.studentLoggedViewController == nil)
@@ -49,13 +63,6 @@
         [studentLoggedViewController release];
     }
     
-    [UIView beginAnimations:@"View Flip" context:nil];
-    [UIView setAnimationDuration:1.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-        
-    [UIView setAnimationTransition:
-         UIViewAnimationTransitionFlipFromLeft
-                               forView:self.view cache:YES];
     [studentLoggedViewController viewWillAppear:YES];
     [loginViewController viewWillDisappear:YES];
     [loginViewController.view removeFromSuperview];
@@ -63,9 +70,14 @@
     [loginViewController viewDidDisappear:YES];
     [studentLoggedViewController viewDidAppear:YES];
     
+    if([loginViewController.loginField.text isEqualToString:@"bora"])
+    {
+        studentLoggedViewController.label.text = loginViewController.loginField.text;
+    }
+    
 }
 
-- (IBAction)switchToProfView:(id)sender
+- (IBAction)switchToProfView
 {
     if(self.profLoggedViewController == nil)
     {
@@ -73,13 +85,7 @@
         self.profLoggedViewController = profLoggedViewController;
         [profLoggedViewController release];
     }
-    [UIView beginAnimations:@"View Flip" context:nil];
-    [UIView setAnimationDuration:1.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     
-    [UIView setAnimationTransition:
-     UIViewAnimationTransitionFlipFromLeft
-                           forView:self.view cache:YES];
     [profLoggedViewController viewWillAppear:YES];
     [loginViewController viewWillDisappear:YES];
     [loginViewController.view removeFromSuperview];
@@ -98,13 +104,6 @@
         [loginViewController release];
     }
     
-    [UIView beginAnimations:@"View Flip" context:nil];
-    [UIView setAnimationDuration:1.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    [UIView setAnimationTransition:
-     UIViewAnimationTransitionFlipFromLeft
-                           forView:self.view cache:YES];
     [loginViewController viewWillAppear:YES];
     [profLoggedViewController viewWillDisappear:YES];
     [profLoggedViewController.view removeFromSuperview];
@@ -122,13 +121,6 @@
         [studentAgreeViewController release];
     }
     
-    [UIView beginAnimations:@"View Flip" context:nil];
-    [UIView setAnimationDuration:1.25];
-    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
-    
-    [UIView setAnimationTransition:
-     UIViewAnimationTransitionFlipFromLeft
-                           forView:self.view cache:YES];
     [studentAgreeViewController viewWillAppear:YES];
     [studentLoggedViewController viewWillDisappear:YES];
     [studentLoggedViewController.view removeFromSuperview];

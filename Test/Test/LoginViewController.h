@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface LoginViewController : UIViewController {
+    IBOutlet UITextField *loginField;
+}
+
+@property (weak, nonatomic) IBOutlet UITextField *loginField;
 
 -(IBAction)loginButtonPressed:(id)sender;
 @end

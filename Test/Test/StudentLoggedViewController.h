@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudentLoggedViewController : UIViewController
+@interface StudentLoggedViewController : UIViewController {
+    IBOutlet UILabel *label;
+}
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
