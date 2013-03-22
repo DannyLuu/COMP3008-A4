@@ -6,16 +6,45 @@
 		</title>
 		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
-		<script type="text/javascript" src="../misc/DefaultScripts.js"></script>
 	</head>
 		
 		<body>
 			<h1>Date and Time example</h1>
 			<table boarder="0">
 				<tr>
-					<th><label id="date" onload="getDate()">adsdf</label></th>
-					<th>Time: </th>
-				</tr>
+					<th>Date: <script>
+
+						var today = new Date();
+						var day   = today.getDate();
+						var month = today.getMonth();
+						var year  = today.getYear(); 
+						
+						document.write("<b>" + day + "/" + month + "/" + year + "</b>");
+
+					</script></th>
+					<th>Time: 
+					<script>
+						var time    = new Date();
+						var hours   = time.getHours();
+						var minutes = time.getMinutes();
+						var seconds = time.getSeconds();
+						
+						if (minutes < 10)
+							minutes = "0" + minutes;
+							
+						var meridiem = "AM";
+						if (hours >= 12)
+						{
+							meridiem = "PM";
+							hours = hours - 12;
+						}
+						
+						if (hours == 0)
+							hours = 12;
+						
+						document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
+					</script></th>
+			</tr>
 			</table>
 		</body>
 </html>

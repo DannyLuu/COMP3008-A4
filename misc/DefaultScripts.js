@@ -5,7 +5,7 @@ function getDate()
 	var month = today.getMonth();
 	var year  = today.getYear(); 
 	
-	document.getElementById("date").value = "<b>" + day + "/" + month + "/" + year + "</b>";
+	document.write("<b>" + day + "/" + month + "/" + year + "</b>");
 } // End getDate()
 
 function getTime24()
