@@ -21,6 +21,7 @@
 @synthesize studentLoggedViewController;
 @synthesize profLoggedViewController;
 @synthesize studentAgreeViewController;
+@synthesize currentViewController;
 
 
 - (void)viewDidLoad
@@ -31,6 +32,7 @@
     self.loginViewController = loginViewController;
     [self.view insertSubview:loginViewController.view atIndex:0];
     [loginViewController release];
+    self.currentViewController = loginViewController;
 	
 }
 
@@ -51,6 +53,7 @@
     }
     
     loginViewController.loginField.text = @"";
+    loginViewController.passwordField.text = @"";
 }
 
 - (IBAction)switchToStudentView
@@ -69,11 +72,7 @@
     [self.view insertSubview:studentLoggedViewController.view atIndex:0];
     [loginViewController viewDidDisappear:YES];
     [studentLoggedViewController viewDidAppear:YES];
-    
-    if([loginViewController.loginField.text isEqualToString:@"bora"])
-    {
-        studentLoggedViewController.label.text = loginViewController.loginField.text;
-    }
+    currentViewController = studentLoggedViewController;
     
 }
 
@@ -92,10 +91,11 @@
     [self.view insertSubview:profLoggedViewController.view atIndex:0];
     [loginViewController viewDidDisappear:YES];
     [profLoggedViewController viewDidAppear:YES];
+    currentViewController = profLoggedViewController;
 
 }
 
-- (IBAction)logout:(id)sender
+- (IBAction)logout
 {
     if(self.loginViewController == nil)
     {
@@ -105,11 +105,12 @@
     }
     
     [loginViewController viewWillAppear:YES];
-    [profLoggedViewController viewWillDisappear:YES];
-    [profLoggedViewController.view removeFromSuperview];
+    [currentViewController viewWillDisappear:YES];
+    [currentViewController.view removeFromSuperview];
     [self.view insertSubview:loginViewController.view atIndex:0];
-    [profLoggedViewController viewDidDisappear:YES];
+    [currentViewController viewDidDisappear:YES];
     [loginViewController viewDidAppear:YES];
+    currentViewController = loginViewController;
 }
 
 - (IBAction)studentAgree:(id)sender
@@ -127,6 +128,7 @@
     [self.view insertSubview:studentAgreeViewController.view atIndex:0];
     [studentLoggedViewController viewDidDisappear:YES];
     [studentAgreeViewController viewDidAppear:YES];
+    currentViewController = studentAgreeViewController;
 }
 
 @end

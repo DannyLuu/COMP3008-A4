@@ -18,16 +18,18 @@
     StudentLoggedViewController *studentLoggedViewController;
     ProfLoggedViewController *profLoggedViewController;
     StudentAgreeViewController *studentAgreeViewController;
+    UIViewController *currentViewController;
 }
 
 @property (retain, nonatomic) LoginViewController *loginViewController;
 @property (retain, nonatomic) StudentLoggedViewController *studentLoggedViewController;
 @property (retain, nonatomic) ProfLoggedViewController *profLoggedViewController;
 @property (retain, nonatomic) StudentAgreeViewController *studentAgreeViewController;
+@property (retain, nonatomic) UIViewController *currentViewController;
 
 -(IBAction)swtichViews:(id)sender;
 -(IBAction)switchToStudentView;
 -(IBAction)switchToProfView;
--(IBAction)logout:(id)sender;
+-(IBAction)logout;
 -(IBAction)studentAgree:(id)sender;
 @end

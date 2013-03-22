@@ -14,6 +14,7 @@
 
 @implementation LoginViewController
 @synthesize loginField;
+@synthesize passwordField;
 
 - (IBAction)loginButtonPressed:(id)sender
 {
@@ -32,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    passwordField.secureTextEntry = YES;
     // Do any additional setup after loading the view from its nib.
 }
 
