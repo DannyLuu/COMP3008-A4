@@ -5,7 +5,7 @@ function getDate()
 	var month = today.getMonth();
 	var year  = today.getYear(); 
 	
-	document.write("<b>" + day + "/" + month + "/" + year + "</b>")
+	document.getElementById("date").value = "<b>" + day + "/" + month + "/" + year + "</b>";
 } // End getDate()
 
 function getTime24()
@@ -41,5 +41,5 @@ function getTime12()
 	if (hours == 0)
 		hours = 12;
 	
-	document.write("<b>" + hours + ":" + minutes + ":" + secondd + " " + meridiem + "</b>"); 
+	//document.getElementById('date').value = "<b>" + hours + ":" + minutes + ":" + secondd + " " + meridiem + "</b>"; 
 }
