@@ -2,17 +2,77 @@
 <html>
 	<head>
 		<title>
-			Proctor Main
+			Proctor Main Screen
 		</title>
-		
+		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
 	</head>
 	<body>
 		<h1>Proctor Main</h1>
 		
-		<p>
-			Welcome to the Tablet Examination Service
-		</p>
+		<table boarder="0">
+				<tr>
+					<th>Date: 
+						<script>
+
+							var today = new Date();
+							var day   = today.getDate();
+							var month = today.getMonth();
+							var year  = today.getYear(); 
+							
+							document.write("<b>" + day + "/" + month + "/" + year + "</b>");
+
+						</script>
+					</th>
+					
+					<th>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</th>
+					
+					<th>Time: 
+					<script>
+						var time    = new Date();
+						var hours   = time.getHours();
+						var minutes = time.getMinutes();
+						
+						if (minutes < 10)
+							minutes = "0" + minutes;
+							
+						var meridiem = "AM";
+						if (hours >= 12)
+						{
+							meridiem = "PM";
+							hours = hours - 12;
+						}
+						
+						if (hours == 0)
+							hours = 12;
+						
+						document.write("<b>" + hours + ":" + minutes + " " + meridiem + "</b>");
+					</script></th>
+			</tr>
+			
+			<tr>
+				<td>Room Capacity:</td>
+				<td>50</td>
+				<td>Persons (46 Students)</td>
+			</tr>
+			<tr>
+				<td>Students Expected:</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td>Currently Present:</td>
+				<td>0/35</td>
+			</tr>
+			<tr>
+				<td>ID's Verifyed:</td>
+				<td>0/35</td>
+			</tr>
+			
+		</table>
+		
+		<img src="../Images/Classroom_Students.jpg">
 		
 	</body>
 </html>
