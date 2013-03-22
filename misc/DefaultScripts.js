@@ -6,7 +6,7 @@ function getDate()
 	var year  = today.getYear(); 
 	
 	document.write("<b>" + day + "/" + month + "/" + year + "</b>");
-} // End getDate()
+}
 
 function getTime24()
 {

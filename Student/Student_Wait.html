@@ -4,7 +4,7 @@
 		<title>
 			Title: Student Waiting Lobby
 		</title>
-		<meta http-equiv="refresh" content="1" />
+		<meta http-equiv="refresh" content="60" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
 	</head>
 		
@@ -12,22 +12,28 @@
 			<h1>Date and Time example</h1>
 			<table boarder="0">
 				<tr>
-					<th>Date: <script>
+					<th>Date: 
+						<script>
 
-						var today = new Date();
-						var day   = today.getDate();
-						var month = today.getMonth();
-						var year  = today.getYear(); 
-						
-						document.write("<b>" + day + "/" + month + "/" + year + "</b>");
+							var today = new Date();
+							var day   = today.getDate();
+							var month = today.getMonth();
+							var year  = today.getYear(); 
+							
+							document.write("<b>" + day + "/" + month + "/" + year + "</b>");
 
-					</script></th>
+						</script>
+					</th>
+					
+					<th>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</th>
+					
 					<th>Time: 
 					<script>
 						var time    = new Date();
 						var hours   = time.getHours();
 						var minutes = time.getMinutes();
-						var seconds = time.getSeconds();
 						
 						if (minutes < 10)
 							minutes = "0" + minutes;
@@ -42,9 +48,18 @@
 						if (hours == 0)
 							hours = 12;
 						
-						document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
+						document.write("<b>" + hours + ":" + minutes + " " + meridiem + "</b>");
 					</script></th>
 			</tr>
 			</table>
+			
+			<br>
+			
+			<img src="../Images/Classroom_Exit.jpg">
+			<p>
+			Please take note of the emergency exits around you.
+			In case of an emergency, exit through the labled doors and take the stairs to the main floor and exit to the right.
+			Note: No not use elevators incase of an emergency!
+			</p>
 		</body>
 </html>
