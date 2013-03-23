@@ -17,6 +17,7 @@
 @synthesize passwordField;
 @synthesize dateLabel;
 @synthesize timeLabel;
+@synthesize dateFormatter;
 
 - (IBAction)loginButtonPressed:(id)sender
 {
@@ -27,7 +28,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+        [super createTimer:@selector(updateDate)];
+        [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
     }
     return self;
 }
@@ -36,10 +40,6 @@
 {
     [super viewDidLoad];
     passwordField.secureTextEntry = YES;
-    
-    [super createTimer:@selector(updateDate)];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,14 +51,10 @@
 - (void)updateDate
 {
     //Get today's date
-    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
-    [formatter setDateFormat:@"dd-MM-YYYY"];
-    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+    NSString *dateStr = [dateFormatter stringFromDate:[NSDate date]];
     dateLabel.text = dateStr;
     
     //Get time
-    NSDateFormatter *timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
-    [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
     NSString *timeStr = [timeFormatter stringFromDate:[NSDate date]];
     timeLabel.text = timeStr;
 }

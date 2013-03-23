@@ -14,12 +14,14 @@
     IBOutlet UITextField *passwordField;
     IBOutlet UILabel *dateLabel;
     IBOutlet UILabel *timeLabel;
+    NSDateFormatter *dateFormatter;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *loginField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (retain, nonatomic) NSDateFormatter *dateFormatter;
 
 -(IBAction)loginButtonPressed:(id)sender;
 @end

@@ -13,11 +13,13 @@
     IBOutlet UIView *assistancePopupView;
     IBOutlet UITableView *assistanceTable;
     IBOutlet UILabel *timerLabel;
+    NSDate *examTime;
 }
 
 @property (retain, nonatomic) IBOutlet UIView *popupView;
 @property (retain, nonatomic) IBOutlet UIView *assistancePopupView;
 @property (retain, nonatomic) IBOutlet UITableView *assistanceTable;
+@property (nonatomic, retain) NSDate *examTime;
 
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)assistanceButtonPressed:(id)sender;

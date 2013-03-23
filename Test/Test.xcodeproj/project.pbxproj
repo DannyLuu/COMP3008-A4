@@ -116,12 +116,8 @@
 		584B715D16FBB940008751F3 /* Test */ = {
 			isa = PBXGroup;
 			children = (
-				580DC13116FE301D00CA9ACC /* ProctorViewController.h */,
-				580DC13216FE301E00CA9ACC /* ProctorViewController.m */,
 				584B716616FBB940008751F3 /* AppDelegate.h */,
 				584B716716FBB940008751F3 /* AppDelegate.m */,
-				584B718116FBBA40008751F3 /* StudentLoggedViewController.h */,
-				584B718216FBBA40008751F3 /* StudentLoggedViewController.m */,
 				584B718616FBBBA6008751F3 /* ExamStartsViewController.h */,
 				584B718716FBBBA6008751F3 /* ExamStartsViewController.m */,
 				584B717A16FBB962008751F3 /* LoginViewController.h */,
@@ -132,8 +128,12 @@
 				587FBB0F16FE3E35009C961B /* CurrentViewController.m */,
 				584B719016FBE70F008751F3 /* ProfLoggedViewController.h */,
 				584B719116FBE710008751F3 /* ProfLoggedViewController.m */,
+				580DC13116FE301D00CA9ACC /* ProctorViewController.h */,
+				580DC13216FE301E00CA9ACC /* ProctorViewController.m */,
 				584B718B16FBDE36008751F3 /* StudentAgreeViewController.h */,
 				584B718C16FBDE37008751F3 /* StudentAgreeViewController.m */,
+				584B718116FBBA40008751F3 /* StudentLoggedViewController.h */,
+				584B718216FBBA40008751F3 /* StudentLoggedViewController.m */,
 				580DC13316FE301E00CA9ACC /* ProctorViewController.xib */,
 				584B719216FBE710008751F3 /* ProfLoggedViewController.xib */,
 				584B718D16FBDE3B008751F3 /* StudentAgreeViewController.xib */,
