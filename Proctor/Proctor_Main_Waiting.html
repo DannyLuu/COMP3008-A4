@@ -2,15 +2,15 @@
 <html>
 	<head>
 		<title>
-			Student Late
+			Proctor Main Screen 2
 		</title>
-		<meta http-equiv="refresh" content="60" />
+		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
 	</head>
+	<body>
+		<h1>Proctor Main</h1>
 		
-		<body>
-			<h1>COMP 3008 - Exam</h1>
-			<table boarder="0">
+		<table boarder="0">
 				<tr>
 					<th>Date: 
 						<script>
@@ -34,6 +34,7 @@
 						var time    = new Date();
 						var hours   = time.getHours();
 						var minutes = time.getMinutes();
+						var seconds = time.getSeconds();
 						
 						if (minutes < 10)
 							minutes = "0" + minutes;
@@ -48,21 +49,33 @@
 						if (hours == 0)
 							hours = 12;
 						
-						document.write("<b>" + hours + ":" + minutes + " " + meridiem + "</b>");
+						if (seconds < 10)
+							seconds = "0" + seconds;
+						document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
 					</script></th>
 			</tr>
-			</table>
 			
-			<br>
+			<tr>
+				<td>Room Capacity:</td>
+				<td>50</td>
+				<td>Persons (46 Students)</td>
+			</tr>
+			<tr>
+				<td>Students Expected:</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td>Currently Present:</td>
+				<td>0/35</td>
+			</tr>
+			<tr>
+				<td>ID's Verifyed:</td>
+				<td>0/35</td>
+			</tr>
 			
-			<img src="../Images/Classroom_Exit.jpg">
-			<p class="exam">The Exam has already started!</p>
-			<p>
-			Please take note of the emergency exits around you.
-			In case of an emergency, exit through the labeled doors and take the stairs to the main floor and exit to the right.
-			</p>
-			<p class="bold">
-			Note: No not use elevators incase of an emergency!
-			</p>
-		</body>
+		</table>
+		
+		<img src="../Images/Classroom_Students_Arrive.jpg">
+		
+	</body>
 </html>
