@@ -13,7 +13,6 @@
 @end
 
 @implementation StudentAgreeViewController
-@synthesize webView;
 @synthesize popupView;
 @synthesize assistancePopupView;
 @synthesize assistanceTable;
@@ -34,7 +33,7 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];*/
     
-    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/home.html"];
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
@@ -79,6 +78,16 @@
         assistancePopupView.hidden = NO;
     }else
         assistancePopupView.hidden = YES;
+}
+
+- (void)resetWebView
+{
+    [super resetWebView];
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestObj];
+
 }
 
 @end

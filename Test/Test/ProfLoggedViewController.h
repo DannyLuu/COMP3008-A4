@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrentViewController.h"
 
-@interface ProfLoggedViewController : UIViewController
+@interface ProfLoggedViewController : CurrentViewController
 
 @end

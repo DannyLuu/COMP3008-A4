@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrentViewController.h"
 
-@interface ProctorViewController : UIViewController {
-    IBOutlet UIWebView *webView;
-}
+@interface ProctorViewController :CurrentViewController 
 
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 @end

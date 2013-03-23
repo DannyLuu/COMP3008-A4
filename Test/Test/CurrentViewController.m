@@ -1,19 +1,19 @@
 //
-//  ProctorViewController.m
+//  CurrentViewController.m
 //  Test
 //
 //  Created by Bora Sabuncu on 2013-03-23.
 //  Copyright (c) 2013 Bora Sabuncu. All rights reserved.
 //
 
-#import "ProctorViewController.h"
+#import "CurrentViewController.h"
 
-@interface ProctorViewController ()
+@interface CurrentViewController ()
 
 @end
 
-@implementation ProctorViewController
-
+@implementation CurrentViewController
+@synthesize webView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Proctor/Proctor_Startscreen.html"];
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:requestObj];
+	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,13 +38,11 @@
 
 - (void)resetWebView
 {
-    [super resetWebView];
-    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Proctor/Proctor_Startscreen.html"];
+    NSString *urlAddress = [NSString stringWithFormat:@"about:blank"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
 
-    
-}
 
+}
 @end

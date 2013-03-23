@@ -13,6 +13,7 @@
 @class ProfLoggedViewController;
 @class StudentAgreeViewController;
 @class ProctorViewController;
+@class CurrentViewController;
 
 @interface ViewController : UIViewController {
     LoginViewController *loginViewController;
@@ -20,8 +21,7 @@
     ProfLoggedViewController *profLoggedViewController;
     StudentAgreeViewController *studentAgreeViewController;
     ProctorViewController *proctorViewController;
-
-    UIViewController *currentViewController;
+    CurrentViewController *currentViewController;
 }
 
 @property (retain, nonatomic) LoginViewController *loginViewController;
@@ -29,7 +29,7 @@
 @property (retain, nonatomic) ProfLoggedViewController *profLoggedViewController;
 @property (retain, nonatomic) StudentAgreeViewController *studentAgreeViewController;
 @property (retain, nonatomic) ProctorViewController *proctorViewController;
-@property (retain, nonatomic) UIViewController *currentViewController;
+@property (retain, nonatomic) CurrentViewController *currentViewController;
 
 -(IBAction)swtichViews:(id)sender;
 -(IBAction)switchToStudentView;

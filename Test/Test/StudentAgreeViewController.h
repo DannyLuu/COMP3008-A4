@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrentViewController.h"
 
-@interface StudentAgreeViewController : UIViewController{
-    IBOutlet UIWebView *webView;
+@interface StudentAgreeViewController : CurrentViewController{
     IBOutlet UIView *popupView;
     IBOutlet UIView *assistancePopupView;
     IBOutlet UITableView *assistanceTable;
 }
 
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
 @property (retain, nonatomic) IBOutlet UIView *popupView;
 @property (retain, nonatomic) IBOutlet UIView *assistancePopupView;
 @property (retain, nonatomic) IBOutlet UITableView *assistanceTable;

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrentViewController.h"
 
-@interface LoginViewController : UIViewController {
+@interface LoginViewController : CurrentViewController {
     IBOutlet UITextField *loginField;
     IBOutlet UITextField *passwordField;
     IBOutlet UILabel *dateLabel;

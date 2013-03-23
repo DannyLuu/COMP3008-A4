@@ -30,6 +30,7 @@
 		584B718F16FBDE3C008751F3 /* StudentAgreeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584B718D16FBDE3B008751F3 /* StudentAgreeViewController.xib */; };
 		584B719316FBE711008751F3 /* ProfLoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584B719116FBE710008751F3 /* ProfLoggedViewController.m */; };
 		584B719416FBE711008751F3 /* ProfLoggedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584B719216FBE710008751F3 /* ProfLoggedViewController.xib */; };
+		587FBB1016FE3E35009C961B /* CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587FBB0F16FE3E35009C961B /* CurrentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,8 @@
 		584B719016FBE70F008751F3 /* ProfLoggedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfLoggedViewController.h; sourceTree = "<group>"; };
 		584B719116FBE710008751F3 /* ProfLoggedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfLoggedViewController.m; sourceTree = "<group>"; };
 		584B719216FBE710008751F3 /* ProfLoggedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfLoggedViewController.xib; sourceTree = "<group>"; };
+		587FBB0E16FE3E35009C961B /* CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewController.h; sourceTree = "<group>"; };
+		587FBB0F16FE3E35009C961B /* CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 				584B717B16FBB962008751F3 /* LoginViewController.m */,
 				584B716F16FBB941008751F3 /* ViewController.h */,
 				584B717016FBB941008751F3 /* ViewController.m */,
+				587FBB0E16FE3E35009C961B /* CurrentViewController.h */,
+				587FBB0F16FE3E35009C961B /* CurrentViewController.m */,
 				584B719016FBE70F008751F3 /* ProfLoggedViewController.h */,
 				584B719116FBE710008751F3 /* ProfLoggedViewController.m */,
 				584B718B16FBDE36008751F3 /* StudentAgreeViewController.h */,
@@ -236,6 +241,7 @@
 				584B718E16FBDE3C008751F3 /* StudentAgreeViewController.m in Sources */,
 				584B719316FBE711008751F3 /* ProfLoggedViewController.m in Sources */,
 				580DC13416FE301E00CA9ACC /* ProctorViewController.m in Sources */,
+				587FBB1016FE3E35009C961B /* CurrentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

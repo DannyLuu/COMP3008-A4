@@ -12,6 +12,7 @@
 #import "ProfLoggedViewController.h"
 #import "StudentAgreeViewController.h"
 #import "ProctorViewController.h"
+#import "CurrentViewController.h"
 
 @interface ViewController ()
 
@@ -22,8 +23,8 @@
 @synthesize studentLoggedViewController;
 @synthesize profLoggedViewController;
 @synthesize studentAgreeViewController;
-@synthesize currentViewController;
 @synthesize proctorViewController;
+@synthesize currentViewController;
 
 
 - (void)viewDidLoad
@@ -115,6 +116,7 @@
     [self.view insertSubview:loginViewController.view atIndex:0];
     [currentViewController viewDidDisappear:YES];
     [loginViewController viewDidAppear:YES];
+    [currentViewController resetWebView];
     currentViewController = loginViewController;
 }
 
