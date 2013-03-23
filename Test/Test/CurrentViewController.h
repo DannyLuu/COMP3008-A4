@@ -10,9 +10,11 @@
 
 @interface CurrentViewController : UIViewController {
     IBOutlet UIWebView *webView;
+    NSTimer *timer;
 }
 
 @property (retain, nonatomic) IBOutlet UIWebView *webView;
 
 -(void)resetWebView;
+-(void)createTimer:(SEL)sender;
 @end

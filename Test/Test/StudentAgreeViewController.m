@@ -28,10 +28,8 @@
 
 - (void)viewDidLoad
 {
-    /*NSString *urlAddress = [NSString stringWithFormat:@"http://www.google.com"];
-    NSURL *url = [NSURL URLWithString:urlAddress];
-    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
-    [webView loadRequest:requestObj];*/
+    //Start the timer according to exam time    
+    [super createTimer:@selector(updateTimerLabel)];
     
     NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
@@ -45,8 +43,6 @@
     NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"Student_Wait" ofType:@"html"];
     NSData *htmlData = [NSData dataWithContentsOfFile:htmlFile];
     [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@""]];*/
-    
-    //[webView release];
     
     //Load the assitance table items
     
@@ -88,6 +84,14 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
 
+}
+
+- (void)updateTimerLabel
+{
+    NSDateFormatter *timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [timeFormatter setTimeStyle:NSDateFormatterLongStyle];
+    NSString *timeStr = [timeFormatter stringFromDate:[NSDate date]];
+    timerLabel.text = timeStr;
 }
 
 @end

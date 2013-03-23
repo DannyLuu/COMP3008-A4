@@ -42,7 +42,11 @@
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
-
-
 }
+
+- (void)createTimer:(SEL)sender
+{
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:sender userInfo:nil repeats:YES];
+}
+
 @end

@@ -37,6 +37,19 @@
     [super viewDidLoad];
     passwordField.secureTextEntry = YES;
     
+    [super createTimer:@selector(updateDate)];
+    
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)updateDate
+{
     //Get today's date
     NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
     [formatter setDateFormat:@"dd-MM-YYYY"];
@@ -48,12 +61,6 @@
     [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
     NSString *timeStr = [timeFormatter stringFromDate:[NSDate date]];
     timeLabel.text = timeStr;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
