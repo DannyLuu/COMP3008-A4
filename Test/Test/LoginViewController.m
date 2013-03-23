@@ -15,6 +15,8 @@
 @implementation LoginViewController
 @synthesize loginField;
 @synthesize passwordField;
+@synthesize dateLabel;
+@synthesize timeLabel;
 
 - (IBAction)loginButtonPressed:(id)sender
 {
@@ -34,7 +36,18 @@
 {
     [super viewDidLoad];
     passwordField.secureTextEntry = YES;
-    // Do any additional setup after loading the view from its nib.
+    
+    //Get today's date
+    NSDateFormatter *formatter = [[[NSDateFormatter alloc] init] autorelease];
+    [formatter setDateFormat:@"dd-MM-YYYY"];
+    NSString *dateStr = [formatter stringFromDate:[NSDate date]];
+    dateLabel.text = dateStr;
+    
+    //Get time
+    NSDateFormatter *timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
+    NSString *timeStr = [timeFormatter stringFromDate:[NSDate date]];
+    timeLabel.text = timeStr;
 }
 
 - (void)didReceiveMemoryWarning

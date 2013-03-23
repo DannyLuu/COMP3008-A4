@@ -14,6 +14,9 @@
 
 @implementation StudentAgreeViewController
 @synthesize webView;
+@synthesize popupView;
+@synthesize assistancePopupView;
+@synthesize assistanceTable;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,9 +29,7 @@
 
 - (void)viewDidLoad
 {
-    /*UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    self.webView = webView;
-    NSString *urlAddress = [NSString stringWithFormat:@"http://www.google.com"];
+    /*NSString *urlAddress = [NSString stringWithFormat:@"http://www.google.com"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];*/
@@ -36,11 +37,14 @@
     NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"
                           inDirectory:@"html_files"];
     NSData *htmlData = [NSData dataWithContentsOfFile:htmlFile];
-    webView = [[UIWebView alloc] init];
     [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@""]];
     
     //[webView release];
     
+    //Load the assitance table items
+    
+    popupView.hidden = YES;
+    assistancePopupView.hidden = YES;
     [super viewDidLoad];
     
 }
@@ -49,6 +53,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(id)sender
+{
+    if(popupView.hidden)
+    {
+        popupView.hidden = NO;
+    }else
+        popupView.hidden = YES;
+}
+
+- (IBAction)assistanceButtonPressed:(id)sender
+{
+    if(assistancePopupView.hidden)
+    {
+        assistancePopupView.hidden = NO;
+    }else
+        assistancePopupView.hidden = YES;
 }
 
 @end
