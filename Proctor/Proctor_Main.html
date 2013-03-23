@@ -11,72 +11,73 @@
 		<h1>Proctor Main</h1>
 		
 		<table boarder="0">
-				<tr>
-					<th>Date: 
-						<script>
-
-							var today = new Date();
-							var day   = today.getDate();
-							var month = today.getMonth();
-							var year  = today.getUTCFullYear();  
-							
-							document.write("<b>" + day + "/" + month + "/" + year + "</b>");
-
-						</script>
-					</th>
-					
-					<th>
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					</th>
-					
-					<th>Time: 
+			<tr>
+				<th colspan="2">Date: 
 					<script>
-						var time    = new Date();
-						var hours   = time.getHours();
-						var minutes = time.getMinutes();
-						var seconds = time.getSeconds();
+
+						var today = new Date();
+						var day   = today.getDate();
+						var month = today.getMonth();
+						var year  = today.getUTCFullYear(); 
 						
-						if (minutes < 10)
-							minutes = "0" + minutes;
-							
-						var meridiem = "AM";
-						if (hours >= 12)
-						{
-							meridiem = "PM";
-							hours = hours - 12;
-						}
+						document.write("<b>" + day + "/" + month + "/" + year + "</b>");
+
+					</script>
+				</th>
+				
+				<th>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</th>
+				
+				<th colspan="2">Time: 
+				<script>
+					var time    = new Date();
+					var hours   = time.getHours();
+					var minutes = time.getMinutes();
+					var seconds = time.getSeconds();
+					
+					if (minutes < 10)
+						minutes = "0" + minutes;
 						
-						if (hours == 0)
-							hours = 12;
+					var meridiem = "AM";
+					if (hours >= 12)
+					{
+						meridiem = "PM";
+						hours = hours - 12;
+					}
+					
+					if (hours == 0)
+						hours = 12;
+					
+					if (seconds < 10)
+						seconds = "0" + seconds;
 						
-						if (seconds < 10)
-							seconds = "0" + seconds;
-							
-						document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
-					</script></th>
+					document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
+				</script></th>
 			</tr>
-			
-			<tr>
-				<td>Room Capacity:</td>
-				<td>50</td>
-				<td>Persons (46 Students)</td>
 			</tr>
+	
 			<tr>
-				<td>Students Expected:</td>
-				<td>35</td>
-			</tr>
-			<tr>
-				<td>Currently Present:</td>
-				<td>Not Available</td>
-			</tr>
-			<tr>
+				<td>Students Present:</td>
+				<td>0/35</td>				
+				<td></td>
 				<td>ID's Verified:</td>
 				<td>Not Available</td>
+			</tr>
+			<tr>
+				<td>Assistance:</td>
+				<td>None</td>
+				<td></td>
+				<td>Washroom:</td>
+				<td>Vacant</td>
 			</tr>
 			
 		</table>
 		
 		<img src="../Images/Classroom_Students.jpg">
-		
+		<br>
+		<button type="button" onclick="location.href='Proctor_Main_Waiting.html'">
+		Students Waiting
+		</button>
 	</body>
 </html>

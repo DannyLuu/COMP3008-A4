@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>
-			Proctor Main Screen 2
+			Proctor Main Screen 3
 		</title>
 		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
 	</head>
 	<body>
-		<h1>Proctor - Students Waiting</h1>
+		<h1>Proctor - Students Verified</h1>
 		
 		<table boarder="0">
 			<tr>
@@ -55,13 +55,13 @@
 					document.write("<b>" + hours + ":" + minutes + ":" + seconds + " " + meridiem + "</b>");
 				</script></th>
 			</tr>
-			
+	
 			<tr>
 				<td>Students Present:</td>
-				<td>24/35</td>				
+				<td>33/35</td>				
 				<td></td>
 				<td>ID's Verified:</td>
-				<td>0/24</td>
+				<td>13/33</td>
 			</tr>
 			<tr>
 				<td>Assistance:</td>
@@ -73,13 +73,13 @@
 			
 		</table>
 		
-		<img src="../Images/Classroom_Students_Arrive.jpg">
+		<img src="../Images/Classroom_Students_Verified.jpg">
 		<br>
-		<button type="button" onclick="location.href='Proctor_Main.html'">
-		Back - Main
-		</button>
 		<button type="button" onclick="location.href='Proctor_Verifying.html'">
-		Next - Verifying Students
+		Back - Students Verified
+		</button>
+		<button type="button" onclick="location.href='Proctor_Assistance.html'">
+		Next - Students need assistance
 		</button>
 		
 	</body>
