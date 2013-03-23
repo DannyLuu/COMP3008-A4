@@ -11,6 +11,7 @@
 #import "StudentLoggedViewController.h"
 #import "ProfLoggedViewController.h"
 #import "StudentAgreeViewController.h"
+#import "ProctorViewController.h"
 
 @interface ViewController ()
 
@@ -22,6 +23,7 @@
 @synthesize profLoggedViewController;
 @synthesize studentAgreeViewController;
 @synthesize currentViewController;
+@synthesize proctorViewController;
 
 
 - (void)viewDidLoad
@@ -50,6 +52,9 @@
     }else if([loginViewController.loginField.text isEqualToString:@"prof"])
     {
         [self switchToProfView];
+    }else if ([loginViewController.loginField.text isEqualToString:@"proctor"])
+    {
+        [self switchToProctorView];
     }
     
     loginViewController.loginField.text = @"";
@@ -129,6 +134,24 @@
     [studentLoggedViewController viewDidDisappear:YES];
     [studentAgreeViewController viewDidAppear:YES];
     currentViewController = studentAgreeViewController;
+}
+
+- (IBAction)switchToProctorView
+{
+    if(self.proctorViewController == nil)
+    {
+        ProctorViewController *proctorViewController = [[ProctorViewController alloc] initWithNibName:@"ProctorViewController" bundle:nil];
+        self.proctorViewController = proctorViewController;
+        [proctorViewController release];
+    }
+    
+    [proctorViewController viewWillAppear:YES];
+    [loginViewController viewWillDisappear:YES];
+    [loginViewController.view removeFromSuperview];
+    [self.view insertSubview:proctorViewController.view atIndex:0];
+    [loginViewController viewDidDisappear:YES];
+    [proctorViewController viewDidAppear:YES];
+    currentViewController = proctorViewController;
 }
 
 @end

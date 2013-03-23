@@ -34,10 +34,18 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];*/
     
-    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"index" ofType:@"html"
-                          inDirectory:@"html_files"];
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/home.html"];
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestObj];
+    
+    /*NSBundle *mainBundle = [NSBundle mainBundle];
+    NSString *myFile = [mainBundle pathForResource: @"index" ofType: @"html"];
+    NSLog(@"File path %@", myFile);
+    
+    NSString *htmlFile = [[NSBundle mainBundle] pathForResource:@"Student_Wait" ofType:@"html"];
     NSData *htmlData = [NSData dataWithContentsOfFile:htmlFile];
-    [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@""]];
+    [webView loadData:htmlData MIMEType:@"text/html" textEncodingName:@"UTF-8" baseURL:[NSURL URLWithString:@""]];*/
     
     //[webView release];
     

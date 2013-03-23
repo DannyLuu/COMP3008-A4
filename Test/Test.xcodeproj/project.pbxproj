@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		58473FF916FCA5BD00A39ABB /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 58473FF716FCA5BD00A39ABB /* index.html */; };
-		58473FFA16FCA5BD00A39ABB /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 58473FF816FCA5BD00A39ABB /* style.css */; };
+		580DC13416FE301E00CA9ACC /* ProctorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 580DC13216FE301E00CA9ACC /* ProctorViewController.m */; };
+		580DC13516FE301E00CA9ACC /* ProctorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 580DC13316FE301E00CA9ACC /* ProctorViewController.xib */; };
 		584B715816FBB940008751F3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584B715716FBB940008751F3 /* UIKit.framework */; };
 		584B715A16FBB940008751F3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584B715916FBB940008751F3 /* Foundation.framework */; };
 		584B715C16FBB940008751F3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 584B715B16FBB940008751F3 /* CoreGraphics.framework */; };
@@ -33,8 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		58473FF716FCA5BD00A39ABB /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		58473FF816FCA5BD00A39ABB /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		580DC13116FE301D00CA9ACC /* ProctorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProctorViewController.h; sourceTree = "<group>"; };
+		580DC13216FE301E00CA9ACC /* ProctorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProctorViewController.m; sourceTree = "<group>"; };
+		580DC13316FE301E00CA9ACC /* ProctorViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProctorViewController.xib; sourceTree = "<group>"; };
 		584B715416FBB940008751F3 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		584B715716FBB940008751F3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		584B715916FBB940008751F3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,15 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		58473FF616FCA5BD00A39ABB /* html_files */ = {
-			isa = PBXGroup;
-			children = (
-				58473FF716FCA5BD00A39ABB /* index.html */,
-				58473FF816FCA5BD00A39ABB /* style.css */,
-			);
-			path = html_files;
-			sourceTree = "<group>";
-		};
 		584B714B16FBB940008751F3 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +113,8 @@
 		584B715D16FBB940008751F3 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				580DC13116FE301D00CA9ACC /* ProctorViewController.h */,
+				580DC13216FE301E00CA9ACC /* ProctorViewController.m */,
 				584B716616FBB940008751F3 /* AppDelegate.h */,
 				584B716716FBB940008751F3 /* AppDelegate.m */,
 				584B718116FBBA40008751F3 /* StudentLoggedViewController.h */,
@@ -135,13 +129,13 @@
 				584B719116FBE710008751F3 /* ProfLoggedViewController.m */,
 				584B718B16FBDE36008751F3 /* StudentAgreeViewController.h */,
 				584B718C16FBDE37008751F3 /* StudentAgreeViewController.m */,
+				580DC13316FE301E00CA9ACC /* ProctorViewController.xib */,
 				584B719216FBE710008751F3 /* ProfLoggedViewController.xib */,
 				584B718D16FBDE3B008751F3 /* StudentAgreeViewController.xib */,
 				584B718816FBBBA6008751F3 /* ExamStartsViewController.xib */,
 				584B718316FBBA41008751F3 /* StudentLoggedViewController.xib */,
 				584B717C16FBB962008751F3 /* LoginViewController.xib */,
 				584B717216FBB941008751F3 /* ViewController.xib */,
-				58473FF616FCA5BD00A39ABB /* html_files */,
 				584B715E16FBB940008751F3 /* Supporting Files */,
 			);
 			path = Test;
@@ -222,8 +216,7 @@
 				584B718A16FBBBA6008751F3 /* ExamStartsViewController.xib in Resources */,
 				584B718F16FBDE3C008751F3 /* StudentAgreeViewController.xib in Resources */,
 				584B719416FBE711008751F3 /* ProfLoggedViewController.xib in Resources */,
-				58473FF916FCA5BD00A39ABB /* index.html in Resources */,
-				58473FFA16FCA5BD00A39ABB /* style.css in Resources */,
+				580DC13516FE301E00CA9ACC /* ProctorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +235,7 @@
 				584B718916FBBBA6008751F3 /* ExamStartsViewController.m in Sources */,
 				584B718E16FBDE3C008751F3 /* StudentAgreeViewController.m in Sources */,
 				584B719316FBE711008751F3 /* ProfLoggedViewController.m in Sources */,
+				580DC13416FE301E00CA9ACC /* ProctorViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
