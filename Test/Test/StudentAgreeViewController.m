@@ -53,7 +53,6 @@
     startExamButton.hidden = YES;
     examStartLabel.hidden = YES;
     [super viewDidLoad];
-    
 }
 
 - (void)studentOnTime
@@ -126,4 +125,16 @@
     [extrasList showAssistanceBox:popupButton2];
 }
 
+-(void)showAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Alert!"
+                          message:[NSString stringWithFormat:@"Please wait for assistance"]
+                          delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
+
+}
 @end

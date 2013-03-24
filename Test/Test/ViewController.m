@@ -88,31 +88,29 @@
 
 - (IBAction)logout
 {
-    //if(self.loginViewController == nil)
-    //{
+    if(currentViewController == studentAgreeViewController)
+        [studentAgreeViewController showAlert];
+    else {
         LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
         self.loginViewController = loginViewController;
         [loginViewController release];
-    //}
     
-    [loginViewController viewWillAppear:YES];
-    [currentViewController viewWillDisappear:YES];
-    [currentViewController.view removeFromSuperview];
-    [self.view insertSubview:loginViewController.view atIndex:0];
-    [currentViewController viewDidDisappear:YES];
-    [loginViewController viewDidAppear:YES];
-    [currentViewController resetWebView];
-    currentViewController = loginViewController;
+        [loginViewController viewWillAppear:YES];
+        [currentViewController viewWillDisappear:YES];
+        [currentViewController.view removeFromSuperview];
+        [self.view insertSubview:loginViewController.view atIndex:0];
+        [currentViewController viewDidDisappear:YES];
+        [loginViewController viewDidAppear:YES];
+        [currentViewController resetWebView];
+        currentViewController = loginViewController;
+    }
 }
 
 - (IBAction)switchToStudentView:(NSString *)studentState
 {
-    //if(self.studentLoggedViewController == nil)
-    //{
-        StudentLoggedViewController *studentLoggedViewController = [[StudentLoggedViewController alloc] initWithNibName:@"StudentLoggedViewController" bundle:nil status:studentState];
-        self.studentLoggedViewController = studentLoggedViewController;
-        [studentLoggedViewController release];
-    //}
+    StudentLoggedViewController *studentLoggedViewController = [[StudentLoggedViewController alloc] initWithNibName:@"StudentLoggedViewController" bundle:nil status:studentState];
+    self.studentLoggedViewController = studentLoggedViewController;
+    [studentLoggedViewController release];
     
     [studentLoggedViewController viewWillAppear:YES];
     [loginViewController viewWillDisappear:YES];
@@ -129,7 +127,6 @@
     //if(self.studentAgreeViewController == nil)
     //{
         NSString *status = [[NSString alloc] initWithString:studentLoggedViewController.studentStatus];
-        NSLog(@"Received %@", status);
         StudentAgreeViewController *studentAgreeViewController = [[StudentAgreeViewController alloc] initWithNibName:@"StudentAgreeViewController" bundle:nil status:status];
         self.studentAgreeViewController = studentAgreeViewController;
         [studentAgreeViewController release];

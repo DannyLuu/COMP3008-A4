@@ -19,4 +19,5 @@
 
 -(void)resetWebView;
 -(void)createTimer:(SEL)sender;
+
 @end

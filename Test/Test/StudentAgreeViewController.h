@@ -34,5 +34,6 @@
 - (IBAction)showAssistancePopUp:(id)sender;
 - (IBAction)showExtrasPopUp:(id)sender;
 - (void)updateTimerLabel;
+- (void)showAlert;
 
 @end
