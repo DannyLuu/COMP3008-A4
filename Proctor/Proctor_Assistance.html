@@ -6,8 +6,11 @@
 		</title>
 		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
+		<script type="text/javascript" src="../misc/TimerScript.js">
+			var _StopWatch = new StopWatch();
+		</script>
 	</head>
-	<body>
+	<body onload="StopWatch()">
 		<h1>Proctor - Assistance</h1>
 		
 		<table boarder="0">
@@ -61,48 +64,24 @@
 				<td>33/35</td>				
 				<td></td>
 				<td>ID's Verified:</td>
-				<td>13/33</td>
+				<td>33/33</td>
 			</tr>
 			<tr>
 				<td>Assistance:</td>
 				<td>2</td>
 				<td></td>
 				<td>Washroom:</td>
-				<td><span class="redtext">&lt;student#&gt;
-					<script>
-						var seconds = new int();
-						var minutes = new int();
-						
-						if (seconds == null)
-							var seconds = 0;
-						
-						if (minues == null)
-							var minutes = 0;
-						
-						var s = 0;
-						var m = 0;
-						
-						
-						if (minutes < 10)
-							m = "0" + minutes;
-						else
-							m = minutes
-							
-						if (seconds < 10)
-							s = "0" + seconds;
-						else
-							s = seconds;
-							
-						if (seconds == 60)
-						{
-							minutes++;
-							seconds = 0;
-						}
-						
-						seconds++;
-						
-						document.write("<b>" + m + ":" + s + "</b>");
+				<td><span class="redtext">&lt;student#&gt;</span>
+					<script type="text/javascript">
+						document.write("HELLO1");
+						StopWatch().stop();
+						document.write("HELLO2");
+						var test = StopWatch().duration()
+						docuement.write(test);
+						document.write("HELLO3");
+
 					</script>
+					
 				</td>
 				
 			</tr>
