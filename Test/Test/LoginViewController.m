@@ -29,7 +29,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
-        [dateFormatter setDateFormat:@"dd-MM-YYYY"];
+        [dateFormatter setDateFormat:@"dd.MM.YYYY"];
         [super createTimer:@selector(updateDate)];
         [timeFormatter setTimeStyle:NSDateFormatterShortStyle];
     }

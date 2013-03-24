@@ -31,6 +31,7 @@
 		584B719316FBE711008751F3 /* ProfLoggedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 584B719116FBE710008751F3 /* ProfLoggedViewController.m */; };
 		584B719416FBE711008751F3 /* ProfLoggedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 584B719216FBE710008751F3 /* ProfLoggedViewController.xib */; };
 		587FBB1016FE3E35009C961B /* CurrentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587FBB0F16FE3E35009C961B /* CurrentViewController.m */; };
+		58B293F016FF6C8600934E83 /* AssistanceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B293EF16FF6C8600934E83 /* AssistanceList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		584B719216FBE710008751F3 /* ProfLoggedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfLoggedViewController.xib; sourceTree = "<group>"; };
 		587FBB0E16FE3E35009C961B /* CurrentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentViewController.h; sourceTree = "<group>"; };
 		587FBB0F16FE3E35009C961B /* CurrentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentViewController.m; sourceTree = "<group>"; };
+		58B293EE16FF6C8600934E83 /* AssistanceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssistanceList.h; sourceTree = "<group>"; };
+		58B293EF16FF6C8600934E83 /* AssistanceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssistanceList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 			children = (
 				584B716616FBB940008751F3 /* AppDelegate.h */,
 				584B716716FBB940008751F3 /* AppDelegate.m */,
+				58B293EE16FF6C8600934E83 /* AssistanceList.h */,
+				58B293EF16FF6C8600934E83 /* AssistanceList.m */,
 				584B718616FBBBA6008751F3 /* ExamStartsViewController.h */,
 				584B718716FBBBA6008751F3 /* ExamStartsViewController.m */,
 				584B717A16FBB962008751F3 /* LoginViewController.h */,
@@ -242,6 +247,7 @@
 				584B719316FBE711008751F3 /* ProfLoggedViewController.m in Sources */,
 				580DC13416FE301E00CA9ACC /* ProctorViewController.m in Sources */,
 				587FBB1016FE3E35009C961B /* CurrentViewController.m in Sources */,
+				58B293F016FF6C8600934E83 /* AssistanceList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

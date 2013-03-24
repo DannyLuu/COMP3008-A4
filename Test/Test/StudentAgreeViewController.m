@@ -20,6 +20,8 @@
 @synthesize examTime;
 @synthesize timeLabel;
 @synthesize timerLabel;
+@synthesize assistanceList;
+@synthesize popupButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,14 +30,17 @@
         [super createTimer:@selector(updateTimerLabel)];
         [timeFormatter setDateFormat:@"m:ss"];
         self.examTime = [timeFormatter dateFromString:@"1:00"];
-        countDown = 1;
+        countDown = 10;
+        
+        NSArray *assistanceArray = [NSArray arrayWithObjects:@"Professor", @"Teaching Assistant", @"Proctor", nil];
+        self.assistanceList = [[[AssistanceList alloc] initWithArray:assistanceArray] autorelease];
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    popupView.hidden = YES;
+    popupButton.hidden = YES;
     assistancePopupView.hidden = YES;
     startExamButton.hidden = YES;
     NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
@@ -50,25 +55,6 @@
 {
     [super didReceiveMemoryWarning];
 }
-
-- (IBAction)buttonPressed:(id)sender
-{
-    if(popupView.hidden)
-    {
-        popupView.hidden = NO;
-    }else
-        popupView.hidden = YES;
-}
-
-- (IBAction)assistanceButtonPressed:(id)sender
-{
-    if(assistancePopupView.hidden)
-    {
-        assistancePopupView.hidden = NO;
-    }else
-        assistancePopupView.hidden = YES;
-}
-
 - (void)resetWebView
 {
     [super resetWebView];
@@ -96,6 +82,11 @@
 {
     timerView.hidden = YES;
     //Load the exam page
+}
+
+- (IBAction)showPopUp:(id)sender
+{
+    [assistanceList showAssistanceBox:popupButton];
 }
 
 @end

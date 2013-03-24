@@ -211,6 +211,10 @@ IHlvdXIgYW5zd2VyLgo</bytes>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
+						<object class="NSColor" key="IBUITintColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xNjgzMDQwNjk5IDAuOTQxMDQ1MzQ2NSAwLjU0NTU2OTgwODIAA</bytes>
+						</object>
 						<string key="IBUINormalTitle">Agree</string>
 						<object class="NSColor" key="IBUIHighlightedTitleColor" id="312477197">
 							<int key="NSColorSpace">3</int>
@@ -246,6 +250,10 @@ IHlvdXIgYW5zd2VyLgo</bytes>
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
+						<object class="NSColor" key="IBUITintColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC45ODgyMzUyOTQxIDAuMDI3NDUwOTgwMzkgMC4xODQzMTM3MjU1AA</bytes>
+						</object>
 						<string key="IBUINormalTitle">Disagree</string>
 						<reference key="IBUIHighlightedTitleColor" ref="312477197"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
@@ -844,26 +852,36 @@ IHlvdXIgYW5zd2VyLgo</bytes>
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="logout:">id</string>
+						<string key="logout">id</string>
 						<string key="studentAgree:">id</string>
-						<string key="switchToProfView:">id</string>
-						<string key="switchToStudentView:">id</string>
+						<string key="switchToProfView">id</string>
+						<string key="switchToStudentView">id</string>
+						<string key="swtichToProctorView">id</string>
+						<string key="swtichViews:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="logout:">
-							<string key="name">logout:</string>
+						<object class="IBActionInfo" key="logout">
+							<string key="name">logout</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="studentAgree:">
 							<string key="name">studentAgree:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="switchToProfView:">
-							<string key="name">switchToProfView:</string>
+						<object class="IBActionInfo" key="switchToProfView">
+							<string key="name">switchToProfView</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="switchToStudentView:">
-							<string key="name">switchToStudentView:</string>
+						<object class="IBActionInfo" key="switchToStudentView">
+							<string key="name">switchToStudentView</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="swtichToProctorView">
+							<string key="name">swtichToProctorView</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="swtichViews:">
+							<string key="name">swtichViews:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

@@ -20,11 +20,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         self.timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
         [timeFormatter setTimeStyle:NSDateFormatterLongStyle];
     }
-        
     return self;
 }
 
