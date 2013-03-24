@@ -2,13 +2,13 @@
 <html>
 	<head>
 		<title>
-			Proctor Main Screen 3
+			Proctor Assistance
 		</title>
 		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
 	</head>
 	<body>
-		<h1>Proctor - Students Verified</h1>
+		<h1>Proctor - Assistance</h1>
 		
 		<table boarder="0">
 			<tr>
@@ -68,7 +68,43 @@
 				<td>2</td>
 				<td></td>
 				<td>Washroom:</td>
-				<td>Occupied <span class="redtext">&lt;student#&gt;</td>
+				<td><span class="redtext">&lt;student#&gt;
+					<script>
+						var seconds = new int();
+						var minutes = new int();
+						
+						if (seconds == null)
+							var seconds = 0;
+						
+						if (minues == null)
+							var minutes = 0;
+						
+						var s = 0;
+						var m = 0;
+						
+						
+						if (minutes < 10)
+							m = "0" + minutes;
+						else
+							m = minutes
+							
+						if (seconds < 10)
+							s = "0" + seconds;
+						else
+							s = seconds;
+							
+						if (seconds == 60)
+						{
+							minutes++;
+							seconds = 0;
+						}
+						
+						seconds++;
+						
+						document.write("<b>" + m + ":" + s + "</b>");
+					</script>
+				</td>
+				
 			</tr>
 			
 		</table>
