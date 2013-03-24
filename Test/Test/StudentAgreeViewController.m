@@ -105,8 +105,9 @@
 
 - (IBAction)examStarts
 {
-    timerView.hidden = YES;
     //Load the exam page
+    timerView.hidden = YES;
+    
 }
 
 - (IBAction)showPopUp:(id)sender
