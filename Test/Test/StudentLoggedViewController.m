@@ -14,13 +14,15 @@
 
 @implementation StudentLoggedViewController
 @synthesize label;
+@synthesize studentStatus;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil status:(NSString *)studentState
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
+    self.studentStatus = studentState;
     return self;
 }
 

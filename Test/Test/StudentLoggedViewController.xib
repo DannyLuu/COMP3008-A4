@@ -195,7 +195,7 @@ aW9uIGFuZCBzdGF0ZSB5b3VyIGFzc3VtcHRpb24gYXQgdGhlIGJlZ2lubmluZyBvZiB5b3VyIGFuc3dl
 ci4KA</string>
 							<array class="NSMutableArray" key="NSAttributes">
 								<dictionary>
-									<object class="NSColor" key="NSColor" id="701895718">
+									<object class="NSColor" key="NSColor" id="832643183">
 										<int key="NSColorSpace">1</int>
 										<bytes key="NSRGB">MC4xNDkwMTk2MDc4IDAuMTQ5MDE5NjA3OCAwLjE0OTAxOTYwNzgAA</bytes>
 									</object>
@@ -210,7 +210,7 @@ ci4KA</string>
 									</object>
 								</dictionary>
 								<dictionary>
-									<reference key="NSColor" ref="701895718"/>
+									<reference key="NSColor" ref="832643183"/>
 									<reference key="NSFont" ref="775766670"/>
 									<object class="NSParagraphStyle" key="NSParagraphStyle">
 										<double key="NSParagraphSpacing">14</double>
@@ -389,6 +389,15 @@ ci4KA</string>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">studentAgree</string>
+						<reference key="source" ref="452355534"/>
+						<reference key="destination" ref="606714003"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">66</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">logout</string>
 						<reference key="source" ref="625134760"/>
 						<reference key="destination" ref="606714003"/>
@@ -453,7 +462,7 @@ ci4KA</string>
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="621933576">
+							<object class="IBNSLayoutConstraint" id="609421692">
 								<reference key="firstItem" ref="766721923"/>
 								<int key="firstAttribute">4</int>
 								<int key="relation">0</int>
@@ -501,7 +510,7 @@ ci4KA</string>
 								<float key="scoringTypeFloat">29</float>
 								<int key="contentType">3</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="200318800">
+							<object class="IBNSLayoutConstraint" id="992039930">
 								<reference key="firstItem" ref="786513283"/>
 								<int key="firstAttribute">9</int>
 								<int key="relation">0</int>
@@ -517,7 +526,7 @@ ci4KA</string>
 								<float key="scoringTypeFloat">24</float>
 								<int key="contentType">2</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="151247270">
+							<object class="IBNSLayoutConstraint" id="989748595">
 								<reference key="firstItem" ref="786513283"/>
 								<int key="firstAttribute">5</int>
 								<int key="relation">0</int>
@@ -616,7 +625,7 @@ ci4KA</string>
 						<int key="objectID">5</int>
 						<reference key="object" ref="786513283"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="26772838">
+							<object class="IBNSLayoutConstraint" id="531120207">
 								<reference key="firstItem" ref="786513283"/>
 								<int key="firstAttribute">7</int>
 								<int key="relation">0</int>
@@ -632,7 +641,7 @@ ci4KA</string>
 								<float key="scoringTypeFloat">9</float>
 								<int key="contentType">1</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="518916261">
+							<object class="IBNSLayoutConstraint" id="847623528">
 								<reference key="firstItem" ref="786513283"/>
 								<int key="firstAttribute">8</int>
 								<int key="relation">0</int>
@@ -762,7 +771,7 @@ ci4KA</string>
 						<int key="objectID">33</int>
 						<reference key="object" ref="873379772"/>
 						<array class="NSMutableArray" key="children">
-							<object class="IBNSLayoutConstraint" id="949887537">
+							<object class="IBNSLayoutConstraint" id="587015914">
 								<reference key="firstItem" ref="873379772"/>
 								<int key="firstAttribute">8</int>
 								<int key="relation">0</int>
@@ -778,7 +787,7 @@ ci4KA</string>
 								<float key="scoringTypeFloat">9</float>
 								<int key="contentType">1</int>
 							</object>
-							<object class="IBNSLayoutConstraint" id="215497076">
+							<object class="IBNSLayoutConstraint" id="893750332">
 								<reference key="firstItem" ref="873379772"/>
 								<int key="firstAttribute">7</int>
 								<int key="relation">0</int>
@@ -804,22 +813,22 @@ ci4KA</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">43</int>
-						<reference key="object" ref="215497076"/>
+						<reference key="object" ref="893750332"/>
 						<reference key="parent" ref="873379772"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">46</int>
-						<reference key="object" ref="949887537"/>
+						<reference key="object" ref="587015914"/>
 						<reference key="parent" ref="873379772"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">53</int>
-						<reference key="object" ref="621933576"/>
+						<reference key="object" ref="609421692"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">54</int>
-						<reference key="object" ref="518916261"/>
+						<reference key="object" ref="847623528"/>
 						<reference key="parent" ref="786513283"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -829,17 +838,17 @@ ci4KA</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">63</int>
-						<reference key="object" ref="26772838"/>
+						<reference key="object" ref="531120207"/>
 						<reference key="parent" ref="786513283"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">64</int>
-						<reference key="object" ref="151247270"/>
+						<reference key="object" ref="989748595"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">65</int>
-						<reference key="object" ref="200318800"/>
+						<reference key="object" ref="992039930"/>
 						<reference key="parent" ref="766721923"/>
 					</object>
 				</array>
@@ -870,11 +879,11 @@ ci4KA</string>
 					<reference ref="546046737"/>
 					<reference ref="555095979"/>
 					<reference ref="309146633"/>
-					<reference ref="151247270"/>
-					<reference ref="200318800"/>
+					<reference ref="989748595"/>
+					<reference ref="992039930"/>
 					<reference ref="753962939"/>
 					<reference ref="480959280"/>
-					<reference ref="621933576"/>
+					<reference ref="609421692"/>
 					<reference ref="630684789"/>
 					<reference ref="1022416610"/>
 				</array>
@@ -884,8 +893,8 @@ ci4KA</string>
 				<string key="29.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="33.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array class="NSMutableArray" key="33.IBViewMetadataConstraints">
-					<reference ref="215497076"/>
-					<reference ref="949887537"/>
+					<reference ref="893750332"/>
+					<reference ref="587015914"/>
 				</array>
 				<boolean value="NO" key="33.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="34.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -898,8 +907,8 @@ ci4KA</string>
 				<string key="46.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="5.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<array class="NSMutableArray" key="5.IBViewMetadataConstraints">
-					<reference ref="518916261"/>
-					<reference ref="26772838"/>
+					<reference ref="847623528"/>
+					<reference ref="531120207"/>
 				</array>
 				<boolean value="NO" key="5.IBViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="53.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -924,7 +933,7 @@ ci4KA</string>
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">65</int>
+			<int key="maxID">66</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -979,9 +988,9 @@ ci4KA</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="logout">id</string>
-						<string key="studentAgree:">id</string>
+						<string key="studentAgree">id</string>
 						<string key="switchToProfView">id</string>
-						<string key="switchToStudentView">id</string>
+						<string key="switchToStudentView:">NSString</string>
 						<string key="swtichToProctorView">id</string>
 						<string key="swtichViews:">id</string>
 					</dictionary>
@@ -990,17 +999,17 @@ ci4KA</string>
 							<string key="name">logout</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="studentAgree:">
-							<string key="name">studentAgree:</string>
+						<object class="IBActionInfo" key="studentAgree">
+							<string key="name">studentAgree</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="switchToProfView">
 							<string key="name">switchToProfView</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="switchToStudentView">
-							<string key="name">switchToStudentView</string>
-							<string key="candidateClassName">id</string>
+						<object class="IBActionInfo" key="switchToStudentView:">
+							<string key="name">switchToStudentView:</string>
+							<string key="candidateClassName">NSString</string>
 						</object>
 						<object class="IBActionInfo" key="swtichToProctorView">
 							<string key="name">swtichToProctorView</string>

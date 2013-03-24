@@ -32,9 +32,9 @@
 @property (retain, nonatomic) CurrentViewController *currentViewController;
 
 -(IBAction)swtichViews:(id)sender;
--(IBAction)switchToStudentView;
+-(IBAction)switchToStudentView:(NSString *)status;
 -(IBAction)switchToProfView;
 -(IBAction)logout;
--(IBAction)studentAgree:(id)sender;
+-(IBAction)studentAgree;
 -(IBAction)swtichToProctorView;
 @end

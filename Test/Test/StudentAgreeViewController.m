@@ -13,30 +13,38 @@
 @synthesize timerView;
 @synthesize assistancePopupView;
 @synthesize assistanceTable;
-@synthesize examTime;
 @synthesize timeLabel;
 @synthesize timerLabel;
 @synthesize examStartLabel;
 @synthesize assistanceList;
 @synthesize popupButton;
 @synthesize startExamButton;
+@synthesize studentStatus;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil status:(NSString *)studentState
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         [super createTimer:@selector(updateTimerLabel)];
-        [timeFormatter setDateFormat:@"m:ss"];
-        self.examTime = [timeFormatter dateFromString:@"1:00"];
         countDown = 10;
-        
         NSArray *assistanceArray = [NSArray arrayWithObjects:@"Professor", @"Teaching Assistant", @"Proctor", nil];
         self.assistanceList = [[[AssistanceList alloc] initWithArray:assistanceArray] autorelease];
+        self.studentStatus = studentState;
     }
     return self;
 }
 
 - (void)viewDidLoad
+{
+    if([studentStatus isEqualToString:@"StudentOnTime"])
+        [self studentOnTime];
+    else if([studentStatus isEqualToString:@"StudentLate"])
+        [self studentLate];
+    [super viewDidLoad];
+    
+}
+
+- (void)studentOnTime
 {
     popupButton.hidden = YES;
     assistancePopupView.hidden = YES;
@@ -46,8 +54,20 @@
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
-    [super viewDidLoad];
-    
+}
+
+- (void)studentLate
+{
+    [self timerEnds];
+    popupButton.hidden = YES;
+    assistancePopupView.hidden = YES;
+    startExamButton.hidden = YES;
+    examStartLabel.hidden = YES;
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Started.html"];
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestObj];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,17 +84,22 @@
 
 }
 
+- (void)timerEnds
+{
+    [timer invalidate];
+    timeLabel.hidden = YES;
+    examStartLabel.hidden = NO;
+    timerLabel.hidden = YES;
+    startExamButton.hidden = NO;
+}
+
 - (void)updateTimerLabel
 {
     countDown--;
     timerLabel.text = [NSString stringWithFormat:@"%d", countDown];
     if(countDown == 0)
     {
-        [timer invalidate];
-        timeLabel.hidden = YES;
-        examStartLabel.hidden = NO;
-        timerLabel.hidden = YES;
-        startExamButton.hidden = NO;
+        [self timerEnds];
     }
 }
 

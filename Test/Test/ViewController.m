@@ -47,9 +47,14 @@
 
 - (IBAction)switchViews:(id)sender
 {
-    if([loginViewController.loginField.text isEqualToString:@"student"])
+    if([loginViewController.loginField.text isEqualToString:@"studentLate"])
     {
-        [self switchToStudentView];
+        [self switchToStudentView:@"StudentLate"];
+    
+    }if([loginViewController.loginField.text isEqualToString:@"studentOnTime"])
+    {
+        [self switchToStudentView:@"StudentOnTime"];
+
     }else if([loginViewController.loginField.text isEqualToString:@"prof"])
     {
         [self switchToProfView];
@@ -62,12 +67,11 @@
     loginViewController.passwordField.text = @"";
 }
 
-- (IBAction)switchToStudentView
+- (IBAction)switchToStudentView:(NSString *)studentState
 {
-    
     if(self.studentLoggedViewController == nil)
     {
-        StudentLoggedViewController *studentLoggedViewController = [[StudentLoggedViewController alloc] initWithNibName:@"StudentLoggedViewController" bundle:nil];
+        StudentLoggedViewController *studentLoggedViewController = [[StudentLoggedViewController alloc] initWithNibName:@"StudentLoggedViewController" bundle:nil status:studentState];
         self.studentLoggedViewController = studentLoggedViewController;
         [studentLoggedViewController release];
     }
@@ -120,11 +124,12 @@
     currentViewController = loginViewController;
 }
 
-- (IBAction)studentAgree:(id)sender
+- (IBAction)studentAgree
 {
     if(self.studentAgreeViewController == nil)
     {
-        StudentAgreeViewController *studentAgreeViewController = [[StudentAgreeViewController alloc] initWithNibName:@"StudentAgreeViewController" bundle:nil];
+        NSString *status = [[NSString alloc] initWithString:studentLoggedViewController.studentStatus];
+        StudentAgreeViewController *studentAgreeViewController = [[StudentAgreeViewController alloc] initWithNibName:@"StudentAgreeViewController" bundle:nil status:status];
         self.studentAgreeViewController = studentAgreeViewController;
         [studentAgreeViewController release];
     }
