@@ -22,14 +22,17 @@
 @property (retain, nonatomic) IBOutlet UILabel *examStartLabel;
 @property (retain ,nonatomic) IBOutlet UIButton *startExamButton;
 @property (retain ,nonatomic) IBOutlet UIButton *popupButton;
+@property (retain ,nonatomic) IBOutlet UIButton *popupButton2;
 @property (nonatomic, retain) NSString *studentStatus;
 @property (retain) AssistanceList *assistanceList;
+@property (retain) AssistanceList *extrasList;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil status:(NSString *)studentState;
 - (IBAction)buttonPressed:(id)sender;
 - (IBAction)assistanceButtonPressed:(id)sender;
 - (IBAction)examStarts;
-- (IBAction)showPopUp:(id)sender;
+- (IBAction)showAssistancePopUp:(id)sender;
+- (IBAction)showExtrasPopUp:(id)sender;
 - (void)updateTimerLabel;
 
 @end
