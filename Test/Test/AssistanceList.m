@@ -93,6 +93,15 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.popOver dismissPopoverAnimated:YES];
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Assistance Requested"
+                          message:[NSString stringWithFormat:@"A %@ will be with you shortly", [self.assistance objectAtIndex:indexPath.row]]
+                          delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil];
+    [alert show];
+    [alert release];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
