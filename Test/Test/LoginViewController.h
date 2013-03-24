@@ -10,18 +10,17 @@
 #import "CurrentViewController.h"
 
 @interface LoginViewController : CurrentViewController {
-    IBOutlet UITextField *loginField;
+    /*IBOutlet UITextField *loginField;
     IBOutlet UITextField *passwordField;
     IBOutlet UILabel *dateLabel;
     IBOutlet UILabel *timeLabel;
-    NSDateFormatter *dateFormatter;
+    NSDateFormatter *dateFormatter;*/
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *loginField;
-@property (weak, nonatomic) IBOutlet UITextField *passwordField;
-@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (retain, nonatomic) IBOutlet UITextField *loginField;
+@property (retain, nonatomic) IBOutlet UITextField *passwordField;
+@property (retain, nonatomic) IBOutlet UILabel *dateLabel;
+@property (retain, nonatomic) IBOutlet UILabel *timeLabel;
 @property (retain, nonatomic) NSDateFormatter *dateFormatter;
 
--(IBAction)loginButtonPressed:(id)sender;
 @end

@@ -19,11 +19,6 @@
 @synthesize timeLabel;
 @synthesize dateFormatter;
 
-- (IBAction)loginButtonPressed:(id)sender
-{
-    
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];

@@ -8,10 +8,6 @@
 
 #import "StudentAgreeViewController.h"
 
-@interface StudentAgreeViewController ()
-
-@end
-
 @implementation StudentAgreeViewController
 @synthesize popupView;
 @synthesize timerView;
@@ -20,8 +16,10 @@
 @synthesize examTime;
 @synthesize timeLabel;
 @synthesize timerLabel;
+@synthesize examStartLabel;
 @synthesize assistanceList;
 @synthesize popupButton;
+@synthesize startExamButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +41,7 @@
     popupButton.hidden = YES;
     assistancePopupView.hidden = YES;
     startExamButton.hidden = YES;
+    examStartLabel.hidden = YES;
     NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
@@ -72,8 +71,9 @@
     if(countDown == 0)
     {
         [timer invalidate];
-        timeLabel.text = @"You may start your exam now";
-        timerLabel.text = @"";
+        timeLabel.hidden = YES;
+        examStartLabel.hidden = NO;
+        timerLabel.hidden = YES;
         startExamButton.hidden = NO;
     }
 }

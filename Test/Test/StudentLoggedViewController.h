@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CurrentViewController.h"
 
-@interface StudentLoggedViewController : UIViewController {
+@interface StudentLoggedViewController : CurrentViewController {
     IBOutlet UILabel *label;
 }
 
