@@ -24,8 +24,7 @@
         self.timeFormatter = [[[NSDateFormatter alloc] init] autorelease];
         [timeFormatter setTimeStyle:NSDateFormatterLongStyle];
     }
-    
-    
+        
     return self;
 }
 

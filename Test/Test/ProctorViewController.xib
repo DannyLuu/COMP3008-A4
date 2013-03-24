@@ -403,7 +403,6 @@
 						<string key="studentAgree:">id</string>
 						<string key="switchToProfView">id</string>
 						<string key="switchToStudentView">id</string>
-						<string key="switchViews:">id</string>
 						<string key="swtichToProctorView">id</string>
 						<string key="swtichViews:">id</string>
 					</dictionary>
@@ -422,10 +421,6 @@
 						</object>
 						<object class="IBActionInfo" key="switchToStudentView">
 							<string key="name">switchToStudentView</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="switchViews:">
-							<string key="name">switchViews:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="swtichToProctorView">

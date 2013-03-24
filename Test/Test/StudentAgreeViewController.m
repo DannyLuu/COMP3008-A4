@@ -14,27 +14,30 @@
 
 @implementation StudentAgreeViewController
 @synthesize popupView;
+@synthesize timerView;
 @synthesize assistancePopupView;
 @synthesize assistanceTable;
 @synthesize examTime;
+@synthesize timeLabel;
+@synthesize timerLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        examTime = [NSDate dateWithTimeIntervalSinceNow:20.0];
         [super createTimer:@selector(updateTimerLabel)];
-        [timeFormatter setTimeStyle:NSDateFormatterLongStyle];
+        [timeFormatter setDateFormat:@"m:ss"];
+        self.examTime = [timeFormatter dateFromString:@"1:00"];
+        countDown = 1;
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
-    //Load the assitance table items
-    
     popupView.hidden = YES;
     assistancePopupView.hidden = YES;
+    startExamButton.hidden = YES;
     NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Wait.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
@@ -46,7 +49,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)buttonPressed:(id)sender
@@ -79,8 +81,21 @@
 
 - (void)updateTimerLabel
 {
-    NSString *timeStr = [timeFormatter stringFromDate:[NSDate date]];
-    timerLabel.text = timeStr;
+    countDown--;
+    timerLabel.text = [NSString stringWithFormat:@"%d", countDown];
+    if(countDown == 0)
+    {
+        [timer invalidate];
+        timeLabel.text = @"You may start your exam now";
+        timerLabel.text = @"";
+        startExamButton.hidden = NO;
+    }
+}
+
+- (IBAction)examStarts
+{
+    timerView.hidden = YES;
+    //Load the exam page
 }
 
 @end
