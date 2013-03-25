@@ -43,3 +43,23 @@ function getTime12()
 	
 	//document.getElementById('date').value = "<b>" + hours + ":" + minutes + ":" + secondd + " " + meridiem + "</b>"; 
 }
+
+function checkRadio(form)
+{
+	var radioAnswer;
+	
+	for (var i = 0; i < form.elements.length; i++)
+	{
+		if (form.elements[i].type == 'radio')
+		{
+			if (form.elements[i].checked == true)
+			{
+				radioAnswer = form.elements[i].value;
+			}
+		}
+	}
+	
+	if (radioAnswer == null)
+		alert("No answer was selected");
+	
+}
