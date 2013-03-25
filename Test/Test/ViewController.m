@@ -36,7 +36,6 @@
     [self.view insertSubview:loginViewController.view atIndex:0];
     [loginViewController release];
     self.currentViewController = loginViewController;
-	
 }
 
 - (void)didReceiveMemoryWarning
