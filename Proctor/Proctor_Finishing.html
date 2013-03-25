@@ -2,13 +2,16 @@
 <html>
 	<head>
 		<title>
-			Proctor - Verifying Students
+			Proctor - Students Finishing
 		</title>
 		<meta http-equiv="refresh" content="1" />
 		<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
+		<script type="text/javascript" src="../misc/TimerScript.js">
+			var _StopWatch = new StopWatch();
+		</script>
 	</head>
-	<body>
-		<h1>Proctor - Verifying Students</h1>
+	<body onload="StopWatch()">
+		<h1>Proctor - Students Finishing</h1>
 		
 		<table boarder="0">
 			<tr>
@@ -61,26 +64,26 @@
 				<td>33/35</td>				
 				<td></td>
 				<td>ID's Verified:</td>
-				<td>13/33</td>
+				<td>33/33</td>
 			</tr>
 			<tr>
 				<td>Assistance:</td>
-				<td>None</td>
+				<td>2</td>
 				<td></td>
 				<td>Washroom:</td>
-				<td>Vacant</td>
-			</tr>
-			
+				<td>Vacant
+				</td>
+			</tr>			
 		</table>
 		<button type="button">Emergency Lock All Tablets</button>
 		<br>
-		<img src="../Images/Classroom_Students_Verifying.jpg">
+		<img src="../Images/Classroom_Students_Finishing.jpg">
 		<br>
-		<button type="button" onclick="location.href='Proctor_Main_Waiting.html'">
-		Back - Students Waiting
-		</button>		
-		<button type="button" onclick="location.href='Proctor_Verify_Menu.html'">
-		Next - Students Verify Menu
+		<button type="button" onclick="location.href='Proctor_AssistanceMenu.html'">
+		Back - Assistance Menu
+		</button>
+		<button type="button" onclick="location.href='Proctor_Finished.html'">
+		Next - Students Finished
 		</button>
 	</body>
 </html>
