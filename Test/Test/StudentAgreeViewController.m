@@ -32,7 +32,7 @@
         NSArray *assistanceArray = [NSArray arrayWithObjects:@"Professor", @"Teaching Assistant", @"Proctor", nil];
         self.assistanceList = [[[AssistanceList alloc] initWithArray:assistanceArray] autorelease];
         NSArray *extrasArray = [NSArray arrayWithObjects:@"Ambient", @"Finish Exam", nil];
-        self.extrasList = [[[AssistanceList alloc] initWithArray:extrasArray] autorelease];
+        self.extrasList = [[[ExtrasList alloc] initWithArray:extrasArray] autorelease];
         self.studentStatus = studentState;
     }
     return self;

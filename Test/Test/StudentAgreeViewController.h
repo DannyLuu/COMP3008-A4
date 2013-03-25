@@ -8,6 +8,7 @@
 
 #import "CurrentViewController.h"
 #import "AssistanceList.h"
+#import "ExtrasList.h"
 
 @interface StudentAgreeViewController : CurrentViewController{
        NSInteger countDown;
@@ -25,7 +26,7 @@
 @property (retain ,nonatomic) IBOutlet UIButton *popupButton2;
 @property (nonatomic, retain) NSString *studentStatus;
 @property (retain) AssistanceList *assistanceList;
-@property (retain) AssistanceList *extrasList;
+@property (retain) ExtrasList *extrasList;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil status:(NSString *)studentState;
 - (IBAction)buttonPressed:(id)sender;
