@@ -61,6 +61,8 @@
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
+    
+    
 }
 
 - (void)studentLate
@@ -108,6 +110,11 @@
 {
     //Load the exam page
     timerView.hidden = YES;
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_question01.html"];
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestObj];
+
     
 }
 
