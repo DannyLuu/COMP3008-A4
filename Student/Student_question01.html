@@ -8,12 +8,12 @@
 <body>
 	<h1>COMP 3008 Exam</h1>
 	
-	<video width="600" height="450" controls="controls">
-  	<source src="Videos/doubleback.mp4" type="video/mp4"></source>
-	Your browser does not support the video tag.
+	<video width="600" height="450" controls autoplay>
+		<source src="Videos/doubleback.mp4" type="video/mp4">
+		Your browser does not support the video tag.		
 	</video>
 	<br>
-	<form action="location.href='Student_question02.html'" method="post">
+	<form action="Student_question02.html" method="post">
 		<fieldset>
 			<legend>Question 1</legend>		
 			<span class="redtext">[2 Marks]</span>
@@ -21,12 +21,33 @@
 			What is this move?
 			<br>
 			<br>
-			<input type="radio" name="question01" value="handstand"> Handstand<br>
-			<input type="radio" name="question01" value="backtuck"> Round off backtuck<br>
-			<input type="radio" name="question01" value="doublefull"> Round off double-full twist<br>
-			<input type="radio" name="question01" value="doubleback"> Round off double back tuck<br>
-			<input type="radio" name="question01" value="none"> None of the above<br>
-			<br>
+			<table border="0">
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="handstand"> Handstand
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="backtuck"> Round off backtuck
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="doublefull"> Round off double-full twist
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="doubleback"> Round off double back tuck
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="none"> None of the above
+					</td>
+				</tr>
+			</table>
 			<button type="submit">Answer</button>
 			<button type="button" onclick="location.href='Student_question02.html'">Skip</button>
 		</fieldset>
