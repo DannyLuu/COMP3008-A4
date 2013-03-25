@@ -39,20 +39,21 @@
 }
 
 - (void)viewDidLoad
-{
-       
-    if([studentStatus isEqualToString:@"StudentOnTime"])
-        [self studentOnTime];
-    else if([studentStatus isEqualToString:@"StudentLate"])
-        [self studentLate];
-    
+{   
+    [super viewDidLoad];
+        
     popupView.hidden = YES;
     popupButton.hidden = YES;
     popupButton2.hidden = YES;
     assistancePopupView.hidden = YES;
     startExamButton.hidden = YES;
     examStartLabel.hidden = YES;
-    [super viewDidLoad];
+    
+    if([studentStatus isEqualToString:@"StudentOnTime"])
+        [self studentOnTime];
+    else if([studentStatus isEqualToString:@"StudentLate"])
+        [self studentLate];
+    
 }
 
 - (void)studentOnTime
@@ -61,17 +62,17 @@
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
-    
-    
 }
 
 - (void)studentLate
 {
-    [self timerEnds];
     NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Started.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
+    [self timerEnds];
+    examStartLabel.hidden = YES;
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,8 +92,8 @@
 {
     [timer invalidate];
     timeLabel.hidden = YES;
-    examStartLabel.hidden = NO;
     timerLabel.hidden = YES;
+    examStartLabel.hidden = NO;
     startExamButton.hidden = NO;
 }
 
@@ -101,9 +102,7 @@
     countDown--;
     timerLabel.text = [NSString stringWithFormat:@"%d", countDown];
     if(countDown == 0)
-    {
         [self timerEnds];
-    }
 }
 
 - (IBAction)examStarts
@@ -115,7 +114,6 @@
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
 
-    
 }
 
 - (IBAction)showAssistancePopUp:(id)sender
