@@ -41,7 +41,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)switchViews:(id)sender
@@ -123,13 +122,10 @@
 
 - (IBAction)studentAgree
 {
-    //if(self.studentAgreeViewController == nil)
-    //{
-        NSString *status = [[NSString alloc] initWithString:studentLoggedViewController.studentStatus];
-        StudentAgreeViewController *studentAgreeViewController = [[StudentAgreeViewController alloc] initWithNibName:@"StudentAgreeViewController" bundle:nil status:status];
-        self.studentAgreeViewController = studentAgreeViewController;
-        [studentAgreeViewController release];
-    //}
+    NSString *status = [[NSString alloc] initWithString:studentLoggedViewController.studentStatus];
+    StudentAgreeViewController *studentAgreeViewController = [[StudentAgreeViewController alloc] initWithNibName:@"StudentAgreeViewController" bundle:nil status:status];
+    self.studentAgreeViewController = studentAgreeViewController;
+    [studentAgreeViewController release];
     
     [studentAgreeViewController viewWillAppear:YES];
     [studentLoggedViewController viewWillDisappear:YES];

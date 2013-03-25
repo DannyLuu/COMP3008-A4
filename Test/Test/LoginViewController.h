@@ -9,13 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CurrentViewController.h"
 
-@interface LoginViewController : CurrentViewController {
-    /*IBOutlet UITextField *loginField;
-    IBOutlet UITextField *passwordField;
-    IBOutlet UILabel *dateLabel;
-    IBOutlet UILabel *timeLabel;
-    NSDateFormatter *dateFormatter;*/
-}
+@interface LoginViewController : CurrentViewController
 
 @property (retain, nonatomic) IBOutlet UITextField *loginField;
 @property (retain, nonatomic) IBOutlet UITextField *passwordField;
