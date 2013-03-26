@@ -12,6 +12,7 @@
 @interface ExtrasList : UITableViewController {
     AVAudioPlayer *audioPlayer;
     UIButton *playButton;
+    NSString *submitAction;
 }
 
 -(id)initWithArray:(NSArray*)array;
@@ -19,5 +20,6 @@
 
 @property (retain) NSArray *assistance;
 @property (retain) UIPopoverController *popOver;
+@property (retain) UIWebView *webView;
 
 @end

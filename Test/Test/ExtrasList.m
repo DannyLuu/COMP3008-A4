@@ -15,8 +15,9 @@
 @implementation ExtrasList
 @synthesize assistance;
 @synthesize popOver;
+@synthesize webView;
 
--(id)initWithArray:(NSArray *)array
+-(id)initWithArray:(NSArray *)array 
 {
     self = [super init];
     if (self) {
@@ -108,15 +109,12 @@
     
     if([[self.assistance objectAtIndex:indexPath.row] isEqualToString:@"Ambient"])
         [self playAmbientNoise];
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
-}
+    else if([[self.assistance objectAtIndex:indexPath.row] isEqualToString:@"Submit Exam"])
+    {
+        NSLog(@"Submit Exam");
+        [self submitExam];
+    }
+   }
 - (void)initAudioPlayer
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ambient" ofType:@"mp3"];
@@ -139,6 +137,14 @@
         [playButton setImage:[UIImage imageNamed:@"stop_button.png"] forState:UIControlStateNormal];
 
     }
+}
+
+-(void)submitExam
+{
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_Finished.html"];
+    NSURL *url = [NSURL URLWithString:urlAddress];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestObj];
 }
 
 @end

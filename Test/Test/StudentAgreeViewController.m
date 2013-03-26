@@ -31,7 +31,7 @@
         countDown = 10;
         NSArray *assistanceArray = [NSArray arrayWithObjects:@"Professor", @"Teaching Assistant", @"Proctor", nil];
         self.assistanceList = [[[AssistanceList alloc] initWithArray:assistanceArray] autorelease];
-        NSArray *extrasArray = [NSArray arrayWithObjects:@"Ambient", @"Finish Exam", nil];
+        NSArray *extrasArray = [NSArray arrayWithObjects:@"Ambient", @"Submit Exam", nil];
         self.extrasList = [[[ExtrasList alloc] initWithArray:extrasArray] autorelease];
         self.studentStatus = studentState;
     }
@@ -53,6 +53,8 @@
         [self studentOnTime];
     else if([studentStatus isEqualToString:@"StudentLate"])
         [self studentLate];
+    
+    self.extrasList.webView = webView;
     
 }
 
@@ -108,7 +110,7 @@
 - (IBAction)examStarts
 {
     timerView.hidden = YES;
-    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_question01.html"];
+    NSString *urlAddress = [NSString stringWithFormat:@"http://people.scs.carleton.ca/~bsabuncu/COMP3008-A4/Student/Student_questions.html"];
     NSURL *url = [NSURL URLWithString:urlAddress];
     NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestObj];
