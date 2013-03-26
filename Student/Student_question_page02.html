@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>COMP 3008 - Exam</title>
+<link rel="stylesheet" type="text/css" href="../misc/DefaultLayout.css">
+</head>
+<body>
+	<h1>COMP 3008 Exam</h1>
+	<form>
+		<select name="page_num">
+			<option value="Student_questions.html">Page 1</option>
+			<option value="Student_question_page02.html">Page 2</option>
+			<option value="No more">etc...</option>
+
+		</select>
+		
+		<button style="height: 30px; width: 60px" type="button" onclick="top.location.href=page_num.options[page_num.selectedIndex].value"> Go</button>
+	</form>
+	<form action="Student_Finished.html" method="post">
+		<fieldset>
+			<legend>Question 4</legend>
+			<span class="redtext">Short Answer [42 Marks]</span>
+			<br>	
+			What is the meaning of life?
+			<br>
+				<br>
+				<textarea rows="10" cols="80" style="resize:none"></textarea>
+				<br>
+			</fieldset>
+			
+			<br>
+			<fieldset>
+				<legend>Question 5</legend>
+				<img src="../Images/einstein.jpg">
+				<br>
+				<span class="redtext">Long Answer [100 Marks]</span>
+				<br>
+				Who is this person and what important things has he done for science?
+				<br>
+				<br>
+				<br>
+				<textarea rows="40" cols="80" style="resize:none"></textarea>
+				<br>
+			</fieldset>
+		
+		<br>
+		
+			<fieldset>
+			<legend>Question 6</legend>
+			<span class="redtext">Multiple Choice [2 Marks]</span>
+			<br>
+			What was the prize propsed in class for the winners of assignment 3?
+			<br>
+			<br>
+			<table border="0">
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="handstand"> An evening with Lou Nel
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="backtuck"> 100% in the course!
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="doublefull"> 24-pack of beer
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="doubleback"> 100% on the final exam
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input type="radio" name="question01" value="none"> None of the above
+					</td>
+				</tr>
+			</table>
+			
+		</fieldset>
+		<button style="height: 75px; width: 150px" type="submit">Submit Exam</button>
+		</form>			
+			
+			
+
+	<br>
+	
+</body>
+</html>
