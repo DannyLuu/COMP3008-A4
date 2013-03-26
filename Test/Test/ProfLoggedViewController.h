@@ -11,4 +11,6 @@
 
 @interface ProfLoggedViewController : CurrentViewController
 
+-(IBAction)mainPage;
+
 @end
