@@ -10,7 +10,7 @@
 			var _StopWatch = new StopWatch();
 		</script>
 	</head>
-	<body onload="StopWatch()">
+	<body onload="StopWatch().start()">
 		<h1>Proctor - Assistance</h1>
 		
 		<table boarder="0">
@@ -72,16 +72,7 @@
 				<td></td>
 				<td>Washroom:</td>
 				<td><span class="redtext">&lt;student#&gt;</span>
-					<script type="text/javascript">
-						document.write("HELLO1");
-						StopWatch().stop();
-						document.write("HELLO2");
-						var test = StopWatch().duration()
-						docuement.write(test);
-						document.write("HELLO3");
-
-					</script>
-				</td>				
+								</td>				
 			</tr>			
 		</table>
 		<button type="button">Emergency Lock All Tablets</button>
