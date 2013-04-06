@@ -1,2 +1,11 @@
 
 .DS_Store
+<<<<<<< HEAD
+=======
+
+*.xcuserstate
+
+*.xcbkptlist
+
+*.xcscheme
+>>>>>>> origin/Bora
