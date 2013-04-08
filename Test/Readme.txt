@@ -11,4 +11,7 @@ To run the application follow these instructions:
 	- "student" will show the demo of a student arriving on time.
 	- "studentOnLate" will show the demo of a student arriving late.
 	- "proctor" will show the demo of the proctor screen.
+		* you can navigate through the pages by selecting the options on the bottom of the screen to see the different modes
 	- "prof" will show the professor screen.
+
+Note for the proctor screen, the emergency lock button only works when on the professor's verified page.
